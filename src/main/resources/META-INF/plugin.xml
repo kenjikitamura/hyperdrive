@@ -15,4 +15,12 @@
         <listener class="jp.rainbowdevil.hyperdrive.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="Rainbowdevil Test Action" class="jp.rainbowdevil.hyperdrive.actions.HyperdriveAction" text="Hyperdrive Test Action"
+                description="Hyperdrive Test Action">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta H"/>
+        </action>
+    </actions>
 </idea-plugin>
