@@ -1,9 +1,9 @@
-package com.github.kenjikitamura.hyperdrive.listeners
+package jp.rainbowdevil.hyperdrive.listeners
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.kenjikitamura.hyperdrive.services.MyProjectService
+import jp.rainbowdevil.hyperdrive.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 

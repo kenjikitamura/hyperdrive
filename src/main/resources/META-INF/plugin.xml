@@ -1,18 +1,18 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.kenjikitamura.hyperdrive</id>
-    <name>hyperdrive</name>
+    <id>jp.rainbowdevil.hyperdrive</id>
+    <name>Hyperdrive</name>
     <vendor>kenjikitamura</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.kenjikitamura.hyperdrive.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.kenjikitamura.hyperdrive.services.MyProjectService"/>
+        <applicationService serviceImplementation="jp.rainbowdevil.hyperdrive.services.MyApplicationService"/>
+        <projectService serviceImplementation="jp.rainbowdevil.hyperdrive.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.kenjikitamura.hyperdrive.listeners.MyProjectManagerListener"
+        <listener class="jp.rainbowdevil.hyperdrive.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

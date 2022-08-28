@@ -1,4 +1,4 @@
-package com.github.kenjikitamura.hyperdrive
+package jp.rainbowdevil.hyperdrive
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

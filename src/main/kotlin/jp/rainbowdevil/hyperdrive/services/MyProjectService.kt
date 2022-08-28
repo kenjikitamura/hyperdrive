@@ -1,7 +1,7 @@
-package com.github.kenjikitamura.hyperdrive.services
+package jp.rainbowdevil.hyperdrive.services
 
 import com.intellij.openapi.project.Project
-import com.github.kenjikitamura.hyperdrive.MyBundle
+import jp.rainbowdevil.hyperdrive.MyBundle
 
 class MyProjectService(project: Project) {
 
