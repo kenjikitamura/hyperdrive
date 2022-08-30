@@ -4,10 +4,9 @@ import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.fileEditor.impl.EditorHistoryManager
 import com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.vcs.ProjectLevelVcsManager
 import com.intellij.openapi.vcs.changes.ChangeListManager
-import com.intellij.openapi.vcs.impl.ProjectLevelVcsManagerImpl
 import jp.rainbowdevil.hyperdrive.MyBundle
+import java.io.File
 
 class MyProjectService(private val project: Project) {
 
@@ -61,9 +60,14 @@ class MyProjectService(private val project: Project) {
      */
     private fun getAllFiles() {
         println("全ファイル")
-        val projectLevelVcsManager = ProjectLevelVcsManager.getInstance(project) as ProjectLevelVcsManagerImpl
-        projectLevelVcsManager.allActiveVcss.forEach {
-            println("vcs=${it} ${it.javaClass.simpleName}")
+        val path = project.basePath ?: return
+        fun func(dir: File) {
+            dir.list().forEach {
+                val file = File(dir.absolutePath, it)
+                println("  ${file.absolutePath}")
+                if(file.isDirectory) func(file)
+            }
         }
+        func(File(path))
     }
 }
